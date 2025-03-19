@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>309</height>
+    <height>360</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>-1</x>
      <y>-1</y>
      <width>451</width>
-     <height>301</height>
+     <height>359</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -30,7 +30,6 @@
      <widget class="QLabel" name="label">
       <property name="styleSheet">
        <string notr="true">font: 48px;
-color: rgb(0, 0, 0);
 font-weight:bold;</string>
       </property>
       <property name="text">
@@ -45,8 +44,8 @@ font-weight:bold;</string>
         <item>
          <widget class="QLabel" name="label_2">
           <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 36pt;
+           <string notr="true">
+font: 18pt;
 </string>
           </property>
           <property name="text">
@@ -55,7 +54,11 @@ font: 36pt;
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="styleSheet">
+           <string notr="true">font: 20pt;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -68,8 +71,8 @@ font: 36pt;
         <item>
          <widget class="QLabel" name="label_3">
           <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 36pt;
+           <string notr="true">
+font: 18pt;
 </string>
           </property>
           <property name="text">
@@ -78,7 +81,11 @@ font: 36pt;
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="styleSheet">
+           <string notr="true">font: 20pt ;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -91,8 +98,8 @@ font: 36pt;
         <item>
          <widget class="QLabel" name="label_4">
           <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 36pt;
+           <string notr="true">
+font: 18pt;
 </string>
           </property>
           <property name="text">
@@ -101,7 +108,11 @@ font: 36pt;
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="styleSheet">
+           <string notr="true">font: 20pt;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -114,19 +125,9 @@ font: 36pt;
         <item>
          <widget class="QPushButton" name="pushButton">
           <property name="styleSheet">
-           <string notr="true">QPushButton
-{
+           <string notr="true">
 	font: 30pt;
-	color: rgb(255, 255, 255);
-	background-color: rgb(0, 0, 0);
-}
-
-QPushButton:pressed
-{
-	font: 30pt;
-	color: rgb(255, 255, 255);
-	background-color: rgb(128, 128, 128);
-}</string>
+</string>
           </property>
           <property name="text">
            <string>Create</string>

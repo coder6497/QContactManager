@@ -3,9 +3,6 @@
 
 Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) {
     ui->setupUi(this);
-    QPalette pal = palette();
-    pal.setBrush(QPalette::Window, QBrush(QColor(112, 128, 144), Qt::SolidPattern));
-    setPalette(pal);
     ui->tableWidget->setColumnCount(3);
     ui->tableWidget->setHorizontalHeaderLabels({"name", "phone", "email"});
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -51,11 +48,9 @@ void Widget::on_pushButton_clicked()
         ui->tableWidget->setRowCount(table_vector.size());
         for (const auto& elem: row)
         {
-            std::cout << elem << " ";
             ui->tableWidget->setItem(0, col_count, new QTableWidgetItem(QString::fromStdString(elem)));
             col_count++;
         }
-        std::cout << std::endl;
     }
 }
 
@@ -82,5 +77,18 @@ void Widget::on_pushButton_3_clicked()
 void Widget::on_pushButton_4_clicked()
 {
     QString QtfileName = QFileDialog::getSaveFileName(nullptr, "Куда сохранить?", "", "CSV Files (*.csv);;All Files (*)");
+    std::string string_filename = QtfileName.toStdString();
+    std::ofstream out(string_filename);
+    std::vector<std::vector<std::string>> table_vector;
+    for (int i = 0; i < ui->tableWidget->rowCount(); i++)
+    {
+        for (int j = 0; j < ui->tableWidget->columnCount(); j++)
+        {
+            std::string string_item = ui->tableWidget->item(i, j)->text().toStdString();
+            out << string_item << ",";
+        }
+        out << std::endl;
+    }
+    out.close();
 }
 

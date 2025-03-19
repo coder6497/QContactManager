@@ -6,6 +6,8 @@
 #include <QColor>
 #include <QBrush>
 #include <QFileDialog>
+#include <QEvent>
+#include <QKeyEvent>
 
 #include <iostream>
 #include <fstream>
