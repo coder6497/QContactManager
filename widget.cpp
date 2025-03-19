@@ -70,16 +70,12 @@ void Widget::updateTable(QString name, QString phone, QString email)
 
 void Widget::on_pushButton_3_clicked()
 {
-    int row = ui->tableWidget->rowCount();
-    QList<QTableWidgetItem*> selectedItems = ui->tableWidget->selectedItems();
-     if (selectedItems.isEmpty())
-        return;
-    for (QTableWidgetItem* item: selectedItems)
+    QModelIndexList selected = ui->tableWidget->selectionModel()->selectedRows();
+    for (int i = 0; i < selected.count(); i++)
     {
-        qDebug() << item->text();
+        int row = selected[i].row();
         ui->tableWidget->removeRow(row);
     }
-
 }
 
 
